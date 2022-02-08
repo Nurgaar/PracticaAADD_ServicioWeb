@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+ 
+	<!-- Unidad Persistencia ObjectDB --> 
+	<persistence-unit name="UP_RedMetro_ODB" transaction-type="RESOURCE_LOCAL">
+		<provider>com.objectdb.jpa.Provider</provider>
+		<!-- Clases a "mapear" --> 
+        <class>es.iestetuan.ngg.vo.Acceso</class>
+        <class>es.iestetuan.ngg.vo.Cochera</class>        
+        <class>es.iestetuan.ngg.vo.Color</class>
+        <class>es.iestetuan.ngg.vo.Estacion</class>        
+        <class>es.iestetuan.ngg.vo.Linea</class>
+        <class>es.iestetuan.ngg.vo.LineaEstacion</class>        
+        <class>es.iestetuan.ngg.vo.Tren"</class>        
+
+
+		<properties>
+		  <property name="javax.persistence.jdbc.url" value="objectdb://localhost:6136/red_metro.odb"/>
+		  <property name="javax.persistence.jdbc.user" value="admin"/>
+		  <property name="javax.persistence.jdbc.password" value="admin"/>
+		</properties>
+	</persistence-unit>
+</persistence>
